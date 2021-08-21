@@ -1,0 +1,25 @@
+<section class="stargazers">
+  <div class="container mt-4">
+    <ul>
+      <li v-for="repo in viewer.repositories.edges" class="list-group-item">
+        <div class="row">
+            <div class="col-3">
+            <img v-bind:src ="repo.node.openGraphImageUrl" class="repo-thumb" alt="repo image">
+            </div>
+            <div class="col-9">
+              <h4>{{repo.node.name}}</h4>
+              <p>Open source machine learning framework for everyone</p>
+              <div class="mt-1">
+                
+                <button type="button" class="btn btn-warning ms-3">Star: {{repo.node.stargazers.totalCount}}</button>
+                <button type="button" class="btn btn-secondary">Issues 28</button>
+                <span class="date ms-3">Submited at {{repo.node.updatedAt}} ago by Lakshman</span>
+              </div>
+            </div>
+        </div>
+    </li>
+    </ul>
+  </div>
+
+</section>
+
